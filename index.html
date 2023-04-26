@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Phase 1 Project</title>
+    </head>
+
+    <body>
+        <h1>Phase 1 Project</h1>
+
+        <!-- Creating Search by Category Form -->
+        <form id="search-by-category" action="#" method="POST">
+            <label for="drink-category">Search by Category:</label>
+            <input 
+                type = "text"
+                id = "drink-category"
+                name = "drink-category"
+                placeholder = "drink category"
+            />
+            <input 
+                type = "submit"
+                value = "Search"
+            />
+        </form>
+
+        <!-- Creating Search by Ingredient Form -->
+        <form id="search-by-ingredient" action="#" method="POST">
+            <label for="drink-by-ingredient">Search by Ingredient:</label>
+            <input 
+                type = "text"
+                id = "drink-by-ingredient"
+                name = "drink-by-ingredient"
+                placeholder = "drink ingredient"
+            />
+            <input 
+                type = "submit"
+                value = "Search"
+            />
+        </form>
+
+        <!-- Creating Search by Cocktail Name Form -->
+        <form id="search-by-name" action="#" method="POST">
+            <label for="drink-by-name">Search by Cocktail Name:</label>
+            <input 
+                type = "text"
+                id = "drink-by-name"
+                name = "drink-by-name"
+                placeholder = "drink name"
+            />
+            <input 
+                type = "submit"
+                value = "Search"
+            />
+        </form>
+
+        <!-- Creating Dynamic Display Region -->
+        <div id="results-display">
+            <h3>Search Results</h3>
+            <ul id="search-results">
+                <li>Cocktail 1</li>
+            </ul>
+        </div>
+    </body>
+</html>
