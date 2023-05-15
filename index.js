@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listener for Search by Cocktail Name
     const searchByName = document.getElementById('search-by-name');
     searchByName.addEventListener('submit', (event) => {
-        event.preventDefault(); 
+        event.preventDefault()
         console.log('I have been searched!')
     })
 })
