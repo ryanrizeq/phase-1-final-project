@@ -36,6 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         const instructions = document.createElement('li');
                         instructions.innerText = `Instructions: ${element['strInstructions']}`;
                         drinkInfo.appendChild(instructions);
+
+                        // Create Ingredients information shell
+                        const ingredients = document.createElement('li');
+                        ingredients.innerText = 'Ingredients';
+                        const ingredientsList = document.createElement('ul');
+                        drinkInfo.appendChild(ingredients);
+                        ingredients.appendChild(ingredientsList);
+
+                        
                     })
                 }
             })
