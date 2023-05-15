@@ -17,12 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 for (const element of results) {
                     // Display drink name list of results
-                    const drinkName = document.createElement('li');
+                    const drinkName = document.createElement('h4');
                     drinkName.innerText = element['strDrink'];
                     display.appendChild(drinkName);
-                }
 
-                // 
+                    // Event listener for click on list of names
+                    drinkName.addEventListener('click', () => {
+                        // Create unordered list for drink information
+                        const drinkInfo = document.createElement('ul');
+                        drinkName.appendChild(drinkInfo);
+
+                        // Display drink glass information
+                        const glassInfo = document.createElement('li');
+                        glassInfo.innerText = `Drink Glass: ${element['strGlass']}`;
+                        drinkInfo.appendChild(glassInfo); 
+
+                        // Display instructions information
+                        const instructions = document.createElement('li');
+                        instructions.innerText = `Instructions: ${element['strInstructions']}`;
+                        drinkInfo.appendChild(instructions);
+                    })
+                }
             })
     })
 })
