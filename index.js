@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault()
         // Save search information
         const searchValue = searchByName.elements['drink-by-name'].value;
+        const display = document.getElementById('search-results');
 
         // Fetch data using saved search information
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`)
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(function(data) {
                 const results = Object.values(data)[0];
-                const display = document.getElementById('search-results');
+                
 
                 // Filter results to show drinks with three ingredients or less
                 const filteredResults = results.filter(function (element) {
@@ -38,11 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         const glassInfo = document.createElement('li');
                         glassInfo.innerText = `Drink Glass: ${element['strGlass']}`;
                         drinkInfo.appendChild(glassInfo); 
-
-                        // Display instructions information
-                        const instructions = document.createElement('li');
-                        instructions.innerText = `Instructions: ${element['strInstructions']}`;
-                        drinkInfo.appendChild(instructions);
 
                         // Create Ingredients information shell
                         const ingredients = document.createElement('li');
@@ -81,6 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                             ingredientsList.appendChild(thirdIngredient);
                         }
+
+                        // Display instructions information
+                        const instructions = document.createElement('li');
+                        instructions.innerText = `Instructions: ${element['strInstructions']}`;
+                        drinkInfo.appendChild(instructions);
                     })
                 }
             })
