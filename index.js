@@ -2,19 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Variable declaration
     const searchByName = document.getElementById('search-by-name');
     const resultsDisplay = document.getElementById('results-display');
-    const searchButton = document.getElementById('search-button');
-
-    // Event listener for search button hover
-    searchButton.addEventListener('mouseover', () => {
-        searchButton.style.background = 'blue';
-        searchButton.style.color = 'white';
-    })
-
-    // Event listener for search button hover exit
-    searchButton.addEventListener('mouseout', () => {
-        searchButton.style.background = '#f0f0f0';
-        searchButton.style.color = 'black';
-    })
     
     // Event Listener for form submission
     searchByName.addEventListener('submit', (event) => {
