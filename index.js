@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         searchButton.style.background = 'blue';
         searchButton.style.color = 'white';
     })
+
+    // Event listener for search button hover exit
+    searchButton.addEventListener('mouseout', () => {
+        searchButton.style.background = '#f0f0f0';
+        searchButton.style.color = 'black';
+    })
     
     // Event Listener for form submission
     searchByName.addEventListener('submit', (event) => {
