@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (filteredResults.length === 0) {
                     const nothingFound = document.createElement('h4').innerText = 'No cocktails found :(';
                     display.append(nothingFound);
+
                 } else {
                     for (const element of filteredResults) {
                         // Display drink name list of results
@@ -57,8 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         drinkName.addEventListener('click', () => {
                             // Create unordered list for drink information
                             const drinkInfo = document.createElement('ul');
-                            display.append(drinkInfo);
-    
+                            drinkName.append(drinkInfo);
+                            
+                            // Create img
+                            const cocktailImage = document.createElement('img');
+                            cocktailImage.src = `${element['strDrinkThumb']}`;
+                            cocktailImage.id = 'image'
+                            drinkInfo.appendChild(cocktailImage);
+
                             // Display drink glass information
                             const glassInfo = document.createElement('li');
                             glassInfo.innerText = `Drink Glass: ${element['strGlass']}`;
