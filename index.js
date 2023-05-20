@@ -53,20 +53,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         // Display first ingredient
                         const firstIngredient = document.createElement('li');
-                        firstIngredient.innerText = `${element['strIngredient1']}`;
+                        if (element['strMeasure1'] !== null) {
+                            firstIngredient.innerText = `${element['strMeasure1']} ${element['strIngredient1']}`;
+                        } else {
+                            firstIngredient.innerText = `${element['strIngredient1']}`;
+                        }
                         ingredientsList.appendChild(firstIngredient);
 
                         // Display second ingredient
                         const secondIngredient = document.createElement('li');
                         if (element['strIngredient2'] !== null) {
-                            secondIngredient.innerText = `${element['strIngredient2']}`;
+                            if (element['strMeasure2'] !== null) {
+                                secondIngredient.innerText = `${element['strMeasure2']} ${element['strIngredient2']}`;
+                            } else {
+                                secondIngredient.innerText = `${element['strIngredient2']}`;
+                            }
                             ingredientsList.appendChild(secondIngredient);
                         }
 
                         // Display third ingredient
                         const thirdIngredient = document.createElement('li');
                         if (element['strIngredient3'] !== null) {
-                            thirdIngredient.innerText = `${element['strIngredient3']}`;
+                            if (element['strMeasure3'] !== null) {
+                                thirdIngredient.innerText = `${element['strMeasure3']} ${element['strIngredient3']}`;
+                            } else {
+                                thirdIngredient.innerText = `${element['strIngredient3']}`;
+                            }
                             ingredientsList.appendChild(thirdIngredient);
                         }
                     })
