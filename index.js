@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Variable declaration
     const searchByName = document.getElementById('search-by-name');
     const resultsDisplay = document.getElementById('results-display');
     
@@ -9,13 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Save search information
         const searchValue = searchByName.elements['drink-by-name'].value;
         
-        // Delete existing unordered list
+        // Delete existing search results
         document.getElementById('search-results').remove()
 
         // Create unordered list
         const display = document.createElement('ul');
         display.id = 'search-results';
-
         resultsDisplay.append(display);
 
         // Fetch data using saved search information
@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(function(data) {
                 const results = Object.values(data)[0];
                 
-
                 // Filter results to show drinks with three ingredients or less
                 const filteredResults = results.filter(function (element) {
                     if (element['strIngredient4'] === null) {
@@ -39,6 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     const drinkName = document.createElement('h4');
                     drinkName.innerText = element['strDrink'];
                     display.appendChild(drinkName);
+
+                    // Event listener for mouseover on drink names
+                    drinkName.addEventListener('mouseover', () => {
+                        drinkName.style.color = 'blue';
+                    })
+
+                    // Event listener when moving mouse away from drink names
+                    drinkName.addEventListener('mouseout', () => {
+                        drinkName.style.color = 'black';
+                    })
 
                     // Event listener for click on list of names
                     drinkName.addEventListener('click', () => {
