@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Event listener for drink name hover
                     drinkName.addEventListener('mouseover', () => {
-                        drinkName.style.color = 'blue';
+                        drinkName.style.color = '#0049B7';
                     })
 
                     // Event listener for drink name hover exit
