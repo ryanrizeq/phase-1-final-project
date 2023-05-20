@@ -1,11 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Event Listener for Search by Cocktail Name
     const searchByName = document.getElementById('search-by-name');
+    const resultsDisplay = document.getElementById('results-display');
+    
+    // Event Listener for form submission
     searchByName.addEventListener('submit', (event) => {
         event.preventDefault()
+        
         // Save search information
         const searchValue = searchByName.elements['drink-by-name'].value;
-        const display = document.getElementById('search-results');
+        
+        // Delete existing unordered list
+        document.getElementById('search-results').remove()
+
+        // Create unordered list
+        const display = document.createElement('ul');
+        display.id = 'search-results';
+
+        resultsDisplay.append(display);
 
         // Fetch data using saved search information
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`)
