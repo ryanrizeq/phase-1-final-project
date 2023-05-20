@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Display drink name list of results
                     const drinkName = document.createElement('h4');
                     drinkName.innerText = element['strDrink'];
-                    display.appendChild(drinkName);
+                    display.append(drinkName);
 
                     // Event listener for click on list of names
                     drinkName.addEventListener('click', () => {
                         // Create unordered list for drink information
                         const drinkInfo = document.createElement('ul');
-                        drinkName.appendChild(drinkInfo);
+                        display.append(drinkInfo);
 
                         // Display drink glass information
                         const glassInfo = document.createElement('li');
