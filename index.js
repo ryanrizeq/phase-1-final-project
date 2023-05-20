@@ -62,6 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             secondIngredient.innerText = `${element['strIngredient2']}`;
                             ingredientsList.appendChild(secondIngredient);
                         }
+
+                        // Display third ingredient
+                        const thirdIngredient = document.createElement('li');
+                        if (element['strIngredient3'] !== null) {
+                            thirdIngredient.innerText = `${element['strIngredient3']}`;
+                            ingredientsList.appendChild(thirdIngredient);
+                        }
                     })
                 }
             })
