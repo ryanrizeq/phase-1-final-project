@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const results = Object.values(data)[0];
                 const display = document.getElementById('search-results');
 
-                results.filter(function (element) {
+                const filteredResults = results.filter(function (element) {
                     if (element['strIngredient4'] === null) {
                         return element;
                     }
                 })
                 
-                for (const element of results) {
+                for (const element of filteredResults) {
                     // Display drink name list of results
                     const drinkName = document.createElement('h4');
                     drinkName.innerText = element['strDrink'];
