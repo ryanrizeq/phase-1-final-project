@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const results = Object.values(data)[0];
                 const display = document.getElementById('search-results');
 
+                // Filter results to show drinks with three ingredients or less
                 const filteredResults = results.filter(function (element) {
                     if (element['strIngredient4'] === null) {
                         return element;
@@ -50,7 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         drinkInfo.appendChild(ingredients);
                         ingredients.appendChild(ingredientsList);
 
+                        // Display first ingredient
+                        const firstIngredient = document.createElement('li');
+                        firstIngredient.innerText = `${element['strIngredient1']}`;
+                        ingredientsList.appendChild(firstIngredient);
 
+                        // Display second ingredient
+                        const secondIngredient = document.createElement('li');
+                        if (element['strIngredient2'] !== null) {
+                            secondIngredient.innerText = `${element['strIngredient2']}`;
+                            ingredientsList.appendChild(secondIngredient);
+                        }
                     })
                 }
             })
