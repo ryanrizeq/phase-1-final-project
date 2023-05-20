@@ -1,6 +1,10 @@
+body {
+    background-color: #FFF685;
+}
+
 #title-section {
-    background-color: darkolivegreen;
     text-align: center;
-    color: azure;
-    font-family: monospace;
+    color: #0049B7;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
 }
