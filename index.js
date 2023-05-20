@@ -52,6 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     drinkName.innerText = element['strDrink'];
                     display.append(drinkName);
 
+                    // Event listener for drink name hover
+                    drinkName.addEventListener('mouseover', () => {
+                        drinkName.style.color = 'blue';
+                    })
+
+                    // Event listener for drink name hover exit
+                    drinkName.addEventListener('mouseout', () => {
+                        drinkName.style.color = 'black';
+                    })
+
                     // Event listener for click on list of names
                     drinkName.addEventListener('click', () => {
                         // Create unordered list for drink information
