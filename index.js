@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(function(data) {
                 const results = Object.values(data)[0];
                 const display = document.getElementById('search-results');
+
+                results.filter(function (element) {
+                    if (element['strIngredient4'] === null) {
+                        return element;
+                    }
+                })
                 
                 for (const element of results) {
                     // Display drink name list of results
@@ -44,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         drinkInfo.appendChild(ingredients);
                         ingredients.appendChild(ingredientsList);
 
-                        
+
                     })
                 }
             })
