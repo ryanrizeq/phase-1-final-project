@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Delete existing search results
         document.getElementById('search-results').remove()
 
+        // Create Search Results Heading
+        const searchHeading = document.createElement('h3').innerText = 'Search Results';
+        resultsDisplay.append(searchHeading);
+
         // Create unordered list
         const display = document.createElement('ul');
         display.id = 'search-results';
