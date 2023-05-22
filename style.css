@@ -30,6 +30,5 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: medium;
-    color: white;
-    background-color: #858EFF;
+    position: absolute;
 }
