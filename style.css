@@ -19,3 +19,9 @@ body {
     width: 200px;
     height: 200px;
 }
+
+#search-by-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: x-large;
+}
