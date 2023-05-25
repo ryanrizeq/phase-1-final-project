@@ -13,7 +13,7 @@ If cocktails with names containing the searched keyword and having only three in
 Further, to complete another search, all the user needs to do is return back to the search bar and execute another search with a new keyword. 
 
 ## Demo
-![](https://github.com/ryanrizeq/phase-1-final-project/blob/main/Website%20Navigation.gif)
+![](https://github.com/ryanrizeq/phase-1-final-project/blob/main/Webiste%20Nav.gif)
 
 ## Acknowledgement
 I would like to thank TheCocktailDB for providing the cocktail recipe API data used in this web application. You can find more about this API at https://www.thecocktaildb.com/api.php
