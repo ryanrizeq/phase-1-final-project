@@ -13,7 +13,8 @@ If cocktails with names containing the searched keyword and having only three in
 Further, to complete another search, all the user needs to do is return back to the search bar and execute another search with a new keyword. 
 
 ## Example
-
+See below GIF for an example of website functionality. 
+![](https://github.com/ryanrizeq/phase-1-final-project/blob/main/Website%20Navigation.gif)
 
 
 
